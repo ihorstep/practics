@@ -1,23 +1,25 @@
-<?php
-?>
-
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Login</title>
-        <link rel="stylesheet" href="css/style.css">
-    </head>
-    <body style="background-color:#7f8c8d">
-        <div id="main-wrapper">
-            <h2>Login</h2>
-        </div>
-        <form class="myform" action="index.php" method="post">
-            <label>Username</label><br>
-            <input type="text" class="inputvalues" placeholder="Username"><br>
-            <label>Password</label><br>
-            <input type="password" class="inputvalues" placeholder="Username">
-            <button type="submit" id="login_btn" value="Login"/>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-        </form>
-    </body>
+    <title>Simple Database App</title>
+
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+<h1>Simple Database App</h1>
+
+<ul>
+    <li>
+        <a href="create.php"><strong>Create</strong></a> - add a user
+    </li>
+    <li>
+        <a href="read.php"><strong>Read</strong></a> - find a user
+    </li>
+</ul>
+</body>
 </html>
