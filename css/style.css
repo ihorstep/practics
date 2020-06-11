@@ -1,0 +1,40 @@
+
+#main-wrapper {
+    width:500px;
+    margin: 0 auto;
+    background: white;
+    padding: 5px;
+    border: 2px solid black;
+}
+
+.myform .inputvalues {
+    margin: 0 auto;
+}
+
+.myform {
+    width: 450px;
+}
+
+.inputvalues {
+    width: 430px;
+    padding: 5px;
+}
+
+#logout_btn #login_btn {
+    padding: 5px;
+    width: 100%;
+    text-align: center;
+    font-size: 18pt;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+#login_btn {
+    background-color: azure;
+    color: black;
+}
+
+#logout_btn {
+    background-color: red;
+    color: white;
+}
