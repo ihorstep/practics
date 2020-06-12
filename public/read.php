@@ -1,5 +1,6 @@
 <?php
 if (isset($_POST['submit'])) {
+    if (!hash_equals($_SESSION['csrf'], $_POST['csrf'])) die();
     try {
         require "../config.php";
         require "../common.php";
@@ -50,6 +51,8 @@ if (isset($_POST['submit'])) {
         <label for="location">Location</label>
         <input type="text" id="location" name="location">
         <input type="submit" name="submit" value="View Results">
+        <input name="csrf" type="hidden" value="<?php echo escape($_SESSION['csrf']); ?>">
+
     </form>
 
     <a href="index.php">Back to home</a>

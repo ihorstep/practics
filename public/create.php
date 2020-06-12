@@ -1,13 +1,15 @@
 <?php
 
 if (isset($_POST['submit'])) {
+    if (!hash_equals($_SESSION['csrf'], $_POST['csrf'])) die();
+
     require "../config.php";
     require "../common.php";
 
     $new_user = array(
-        "name" => $_POST['firstname'],
-        "age" => $_POST['email'],
-        "phone" => $_POST['age']
+        "name" => $_POST['name'],
+        "age" => $_POST['age'],
+        "phone" => $_POST['phone']
     );
 
     try {
@@ -30,7 +32,7 @@ if (isset($_POST['submit'])) {
 <?php include "templates/header.php"; ?>
 
 <?php if (isset($_POST['submit']) && $statement) { ?>
-    <?php echo escape($_POST['firstname']); ?> successfully added.
+    <?php echo escape($_POST['name']); ?> successfully added.
 <?php } ?>
 
 <h2>Add a user</h2>
@@ -43,6 +45,7 @@ if (isset($_POST['submit'])) {
     <label for="phone">Phone</label>
     <input type="text" name="phone" id="phone">
     <input type="submit" name="submit" value="Submit">
+    <input name="csrf" type="hidden" value="<?php echo escape($_SESSION['csrf']); ?>">
 </form>
 
 <a href="index.php">Back to home</a>

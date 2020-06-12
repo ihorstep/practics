@@ -1,9 +1,9 @@
 <?php
-$host       = "localhost";
+$host       = "192.168.5.36";
 $username   = "master";
 $password   = "";
-$dbname     = "shoes_master"; // will use later
-$dsn        = "mysql:host=$host;dbname=$dbname"; // will use later
+$dbname     = "shose_master"; // will use later
+$dsn        = "mysql:host=$host;dbname=$dbname;port=3306"; // will use later
 $options    = array(
     PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
 );
