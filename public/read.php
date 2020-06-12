@@ -1,9 +1,12 @@
 <?php
+
+require "../config.php";
+require "../common.php";
+
 if (isset($_POST['submit'])) {
     if (!hash_equals($_SESSION['csrf'], $_POST['csrf'])) die();
     try {
-        require "../config.php";
-        require "../common.php";
+
 
         $connection = new PDO($dsn, $username, $password, $options);
         $sql = "SELECT *  FROM clients;";

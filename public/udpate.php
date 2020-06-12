@@ -1,8 +1,11 @@
 <?php
+
+require "../config.php";
+require "../common.php";
+
 if (!hash_equals($_SESSION['csrf'], $_POST['csrf'])) die();
 try {
-    require "../config.php";
-    require "../common.php";
+
 
     $connection = new PDO($dsn, $username, $password, $options);
 
